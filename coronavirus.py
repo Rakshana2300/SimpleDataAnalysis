@@ -52,7 +52,7 @@ def send_mail(country_element, total_cases, new_cases, total_deaths, new_deaths,
     server.starttls()
     server.ehlo()
 
-    server.login('rakshana2300@gmail.com', 'aakp fihn fiwa epwl')
+    server.login('sender@gmail.com', 'password')
 
     subject = 'Coronavirus stats in your country today!'
 
@@ -70,8 +70,8 @@ def send_mail(country_element, total_cases, new_cases, total_deaths, new_deaths,
     msg = f"Subject: {subject}\n\n{body}"
 
     server.sendmail(
-        'rakshana2300@gmail.com',
-        ,
+        'sender@gmail.com',
+        'receiver@gmail.com',
         msg
     )
     print('Hey Email has been sent!')
